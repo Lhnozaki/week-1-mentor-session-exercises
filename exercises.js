@@ -46,6 +46,27 @@ console.log(alphaOrder(12345));
  * ie: "oreo" => 3
  */
 
+function vowelCount(num) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  if(typeof num !== "string") {
+    return null;
+  } else {
+    let arry3 = num.split("");
+    for(i = 0; i < arry3.length; i++) {
+      for(j = 0; j < vowels.length; j++) {
+        if(arry3[i] == vowels[j]) {
+          count++;
+        }
+      }
+    }
+  }
+  return count;
+}
+
+console.log(vowelCount("four"));
+console.log(vowelCount(12345));
+
  /** Function: timeConvert
  * The function will take the str parameter representing the amount of minutes being passed in and
  * return the number of hours and minutes. Seperate the number of hours
@@ -82,7 +103,7 @@ console.log(alphaOrder(12345));
 module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
-    vowelCount: null,
+    vowelCount: vowelCount,
     timeConvert: null,
     repeatString: null
 }
