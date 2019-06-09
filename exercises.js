@@ -27,10 +27,16 @@ console.log(firstReverse(12345));
  */
 
 function alphaOrder(str) {
-  return str;
+  if(typeof str !== "string") {
+    return null;
+  } else {
+  let arry2 = str.split("").sort().join("");
+  return arry2;
+  };
 }
 
-console.log(alphaOrder("hello"));
+console.log(alphaOrder("hello there"));
+console.log(alphaOrder(12345));
 
  /** Function: vowelCount
  * The function will take the num parameter being passed in and
