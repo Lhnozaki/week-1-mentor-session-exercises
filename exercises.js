@@ -76,6 +76,26 @@ console.log(vowelCount(12345));
  * ie: 68 => 1:8
  */
 
+function timeConvert(num) {
+  let hr = 0;
+  let min = 0;
+  if(typeof num !== "number") {
+    return null; 
+  } else {
+    for(i = 0; i < num; i++) {
+      min++;
+      if (min >= 60) {
+        hr++;
+        min -= 60;
+      }
+    }
+    return `${hr}:${min}`;
+  };
+}
+
+console.log(timeConvert(68));
+console.log(timeConvert("five"));
+
  /** Function: repeatString
  * The function will take in two parameters and repeat a given string (first argument)
  * num times (second argument). Return an empty string if num is a negative number
@@ -104,6 +124,6 @@ module.exports = {
     firstReverse: firstReverse,
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
-    timeConvert: null,
+    timeConvert: timeConvert,
     repeatString: null
 }
