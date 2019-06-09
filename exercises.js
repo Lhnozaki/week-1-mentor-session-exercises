@@ -105,6 +105,22 @@ console.log(timeConvert("five"));
  * i.e repeatString("money", 3) => "moneymoneymoney".
  */
 
+function repeatString(str, num) {
+  let stringArry = []
+  if(num < 0 || typeof str !== "string") {
+    return null;
+  } else {
+    for(i = 0; i < num; i++) {
+      let arry4 = str.split(" ")
+      stringArry.push(arry4[0])
+    }
+    return stringArry.join("");
+  }
+}
+
+console.log(repeatString("hello", 3));
+console.log(repeatString("money", -3));
+console.log(repeatString(3,5));
 
 /**
  * Below here we see a module.exports which is set to an object with a bunch of keys.
@@ -125,5 +141,5 @@ module.exports = {
     alphaOrder: alphaOrder,
     vowelCount: vowelCount,
     timeConvert: timeConvert,
-    repeatString: null
+    repeatString: repeatString
 }
