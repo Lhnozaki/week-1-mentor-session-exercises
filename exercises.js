@@ -7,11 +7,16 @@
  */
 
  function firstReverse(str) {
+   if(typeof str !== "string") {
+     return null;
+   } else {
    let arry1 = str.split("").reverse().join("");
    return arry1;
+   };
  }
 
 console.log(firstReverse("word"));
+console.log(firstReverse(12345));
 
  /** Function: alphaOrder
  * The function will take the str parameter being passed in and
@@ -20,6 +25,12 @@ console.log(firstReverse("word"));
  * @return {string} in alphabetical order
  * ie: "cake" => "acek"
  */
+
+function alphaOrder(str) {
+  return str;
+}
+
+console.log(alphaOrder("hello"));
 
  /** Function: vowelCount
  * The function will take the num parameter being passed in and
@@ -64,7 +75,7 @@ console.log(firstReverse("word"));
 
 module.exports = {
     firstReverse: firstReverse,
-    alphaOrder: null,
+    alphaOrder: alphaOrder,
     vowelCount: null,
     timeConvert: null,
     repeatString: null
